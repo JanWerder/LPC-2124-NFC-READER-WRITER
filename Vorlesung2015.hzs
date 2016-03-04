@@ -1,0 +1,80 @@
+<!DOCTYPE CrossStudio_for_ARM_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints/>
+ <ExecutionProfileWindow/>
+ <Memory1>
+  <MemoryWindow autoEvaluate="0" addressText="" numColumns="8" sizeText="" dataSize="1" radix="16" name="Vorlesung2015" addressSpace="" />
+ </Memory1>
+ <Memory2>
+  <MemoryWindow autoEvaluate="0" addressText="" numColumns="8" sizeText="" dataSize="1" radix="16" name="Vorlesung2015" addressSpace="" />
+ </Memory2>
+ <Memory3>
+  <MemoryWindow autoEvaluate="0" addressText="" numColumns="8" sizeText="" dataSize="1" radix="16" name="Vorlesung2015" addressSpace="" />
+ </Memory3>
+ <Memory4>
+  <MemoryWindow autoEvaluate="0" addressText="" numColumns="8" sizeText="" dataSize="1" radix="16" name="Vorlesung2015" addressSpace="" />
+ </Memory4>
+ <Project>
+  <ProjectSessionItem path="Vorlesung2015" name="unnamed" />
+  <ProjectSessionItem path="Vorlesung2015;Vorlesung2015" name="unnamed" />
+  <ProjectSessionItem path="Vorlesung2015;Vorlesung2015;Source Files" name="unnamed" />
+  <ProjectSessionItem path="Vorlesung2015;Vorlesung2015;System Files" name="unnamed" />
+ </Project>
+ <Register1>
+  <RegisterWindow openNodes="AD;AD/ADCR;AD/ADDR3;GPIO;PCB;PWM;PWM/PWMTCR;PWM/PWMPCR;PWM/PWMLER;SCB;SCB/PLLCFG;UART0;UART0/U0LSR;VIC" binaryNodes="GPIO/IO0PIN;GPIO/IO0SET" hiddenNodes="" unsignedNodes="PWM/PWMMR0;PWM/PWMMR3" visibleGroups="GPIO;PCB;SCB;PWM;AD;VIC;UART0" decimalNodes="" octalNodes="" asciiNodes="" name="Vorlesung2015" />
+ </Register1>
+ <Register2>
+  <RegisterWindow openNodes="" binaryNodes="" hiddenNodes="" unsignedNodes="" visibleGroups="" decimalNodes="" octalNodes="" asciiNodes="" name="Vorlesung2015" />
+ </Register2>
+ <Register3>
+  <RegisterWindow openNodes="" binaryNodes="" hiddenNodes="" unsignedNodes="" visibleGroups="" decimalNodes="" octalNodes="" asciiNodes="" name="Vorlesung2015" />
+ </Register3>
+ <Register4>
+  <RegisterWindow openNodes="" binaryNodes="" hiddenNodes="" unsignedNodes="" visibleGroups="" decimalNodes="" octalNodes="" asciiNodes="" name="Vorlesung2015" />
+ </Register4>
+ <TargetWindow programAction="" uploadFileType="" programLoadAddress="" programSize="" uploadFileName="" uploadMemoryInterface="" programFileName="" uploadStartAddress="" programFileType="" uploadSize="" programMemoryInterface="" />
+ <TraceWindow>
+  <Trace enabled="Yes" />
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never" >
+   <Watchpoint linenumber="152" radix="16" name="btn_down" expression="btn_down" filename="c:/users/eric/documents/crossworks projects/buschprojekt/main.c" />
+   <Watchpoint linenumber="0" radix="2" name="((int) c % 10000) + (((int) c % 10000) *1000000000000000000000000)" expression="((int) c % 10000) + (((int) c % 10000) *1000000000000000000000000)" filename="" />
+   <Watchpoint evalMode="1" linenumber="0" evalType="1" radix="16" name="list" expression="list" filename="" />
+   <Watchpoint linenumber="0" radix="16" name="COL_4" expression="COL_4" filename="" />
+   <Watchpoint linenumber="0" radix="2" name="((int) c % 10000) &lt;&lt;25" expression="((int) c % 10000) &lt;&lt;25" filename="" />
+   <Watchpoint linenumber="147" radix="16" name="T0CR2" expression="T0CR2" filename="c:/users/eric/documents/crossworks projects/buschprojekt/main.c" />
+   <Watchpoint linenumber="0" radix="2" name="((int) c % 100000000) &lt;&lt;17" expression="((int) c % 100000000) &lt;&lt;17" filename="" />
+   <Watchpoint linenumber="0" radix="11" name="characterCount" expression="characterCount" filename="" />
+   <Watchpoint evalMode="0" linenumber="0" evalType="0" radix="1" name="s" expression="s" filename="" />
+   <Watchpoint linenumber="0" radix="2" name="(int) c" expression="(int) c" filename="" />
+   <Watchpoint linenumber="0" radix="1" name="c" expression="c" filename="" />
+   <Watchpoint linenumber="0" radix="2" name="((int) c % 10000)" expression="((int) c % 10000)" filename="" />
+  </Watches>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never" />
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never" />
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never" />
+ </Watch4>
+ <Files>
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="65" debugPath="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\another_main.c" y="79" path="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\another_main.c" left="0" selected="1" name="unnamed" top="68" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\keypad.c" y="82" path="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\keypad.c" left="0" selected="0" name="unnamed" top="65" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\Typedefs.h" y="0" path="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\Typedefs.h" left="0" selected="0" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\keypad.h" y="12" path="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\keypad.h" left="0" selected="0" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\gpio.c" y="22" path="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\gpio.c" left="0" selected="0" name="unnamed" top="0" />
+ </Files>
+ <ARMCrossStudioWindow activeProject="Vorlesung2015" autoConnectTarget="Olimex ARM-USB-OCD" debugSearchFileMap="C:\Users\products\build\crossworks\arm\crossworks_v2\shared\target\libarm\libarm_dcc_read.s
+
+C:\Users\products\build\crossworks\arm\crossworks_v2\shared\target\libarm\libarm_dcc_write.s
+
+C:\Users\products\build\crossworks\arm\crossworks_v2\shared\target\libc\arm\strlen.asm
+
+C:\Users\products\build\crossworks\arm\crossworks_v2\shared\target\libdebugio\arm\debug_printf.s
+" fileDialogInitialDirectory="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt" fileDialogDefaultFilter="" autoConnectCapabilities="388479" debugSearchPath="" buildConfiguration="ARM Flash Debug" />
+</session>
