@@ -2,7 +2,7 @@
 #include <libarm.h>
 #include <stdbool.h>
 #include <targets/LPC2000.h>
-#include <keypad.h>
+#include <Membrane_Switch/keypad.h>
 
 
 int main(void) {

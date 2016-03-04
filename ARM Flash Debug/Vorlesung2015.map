@@ -34,17 +34,6 @@ Discarded input sections
  .text          0x00000000        0x0 ARM Flash Debug/another_main.o
  .data          0x00000000        0x0 ARM Flash Debug/another_main.o
  .bss           0x00000000        0x0 ARM Flash Debug/another_main.o
- .text          0x00000000        0x0 ARM Flash Debug/gpio.o
- .data          0x00000000        0x0 ARM Flash Debug/gpio.o
- .bss           0x00000000        0x0 ARM Flash Debug/gpio.o
- .text.init_pin_0
-                0x00000000       0x40 ARM Flash Debug/gpio.o
- .text.init_pin_1
-                0x00000000       0x40 ARM Flash Debug/gpio.o
- .text.get_pin_value_0
-                0x00000000       0x3c ARM Flash Debug/gpio.o
- .text.set_pin_value
-                0x00000000       0x70 ARM Flash Debug/gpio.o
  .text          0x00000000        0x0 ARM Flash Debug/HD44780U.o
  .data          0x00000000        0x0 ARM Flash Debug/HD44780U.o
  .bss           0x00000000        0x0 ARM Flash Debug/HD44780U.o
@@ -59,6 +48,17 @@ Discarded input sections
  .text          0x00000000        0x0 ARM Flash Debug/keypad.o
  .data          0x00000000        0x0 ARM Flash Debug/keypad.o
  .bss           0x00000000        0x0 ARM Flash Debug/keypad.o
+ .text          0x00000000        0x0 ARM Flash Debug/gpio.o
+ .data          0x00000000        0x0 ARM Flash Debug/gpio.o
+ .bss           0x00000000        0x0 ARM Flash Debug/gpio.o
+ .text.init_pin_0
+                0x00000000       0x40 ARM Flash Debug/gpio.o
+ .text.init_pin_1
+                0x00000000       0x40 ARM Flash Debug/gpio.o
+ .text.get_pin_value_0
+                0x00000000       0x3c ARM Flash Debug/gpio.o
+ .text.set_pin_value
+                0x00000000       0x70 ARM Flash Debug/gpio.o
  .text          0x00000000        0x0 ARM Flash Debug/crt0.o
  .data          0x00000000        0x0 ARM Flash Debug/crt0.o
  .bss           0x00000000        0x0 ARM Flash Debug/crt0.o
@@ -1145,31 +1145,31 @@ Linker script and memory map
  .glue_7t       0x00000000        0x0 linker stubs
  .text.main     0x000002dc       0x38 ARM Flash Debug/another_main.o
                 0x000002dc                main
- .text.get_pin_value_1
-                0x00000314       0x3c ARM Flash Debug/gpio.o
-                0x00000314                get_pin_value_1
- .text.LCD_Cmd  0x00000350       0x40 ARM Flash Debug/HD44780U.o
-                0x00000350                LCD_Cmd
+ .text.LCD_Cmd  0x00000314       0x40 ARM Flash Debug/HD44780U.o
+                0x00000314                LCD_Cmd
  .text.LCD_Enable
-                0x00000390       0x4c ARM Flash Debug/HD44780U.o
-                0x00000390                LCD_Enable
- .text.delay    0x000003dc       0x60 ARM Flash Debug/HD44780U.o
-                0x000003dc                delay
+                0x00000354       0x4c ARM Flash Debug/HD44780U.o
+                0x00000354                LCD_Enable
+ .text.delay    0x000003a0       0x60 ARM Flash Debug/HD44780U.o
+                0x000003a0                delay
  .text.LCD_WriteChar
-                0x0000043c       0x50 ARM Flash Debug/HD44780U.o
-                0x0000043c                LCD_WriteChar
+                0x00000400       0x50 ARM Flash Debug/HD44780U.o
+                0x00000400                LCD_WriteChar
  .text.LCD_Init
-                0x0000048c       0x70 ARM Flash Debug/HD44780U.o
-                0x0000048c                LCD_Init
+                0x00000450       0x70 ARM Flash Debug/HD44780U.o
+                0x00000450                LCD_Init
  .text.LCD_Clear
-                0x000004fc       0x2c ARM Flash Debug/HD44780U.o
-                0x000004fc                LCD_Clear
+                0x000004c0       0x2c ARM Flash Debug/HD44780U.o
+                0x000004c0                LCD_Clear
  .text.init_keypad
-                0x00000528       0x48 ARM Flash Debug/keypad.o
-                0x00000528                init_keypad
+                0x000004ec       0x48 ARM Flash Debug/keypad.o
+                0x000004ec                init_keypad
  .text.wait_and_get_key
-                0x00000570      0x404 ARM Flash Debug/keypad.o
-                0x00000570                wait_and_get_key
+                0x00000534      0x404 ARM Flash Debug/keypad.o
+                0x00000534                wait_and_get_key
+ .text.get_pin_value_1
+                0x00000938       0x3c ARM Flash Debug/gpio.o
+                0x00000938                get_pin_value_1
  .text          0x00000974       0x44 ARM Flash Debug/VIC_irq_handler.o
                 0x00000974                irq_handler
  .text.libc.__vfprintf_double_long_long
@@ -1521,9 +1521,9 @@ Linker script and memory map
                 0x00000001                . = ASSERT (((__tdata_run_end__ >= __SRAM_segment_start__) && (__tdata_run_end__ <= __SRAM_segment_end__)), error: .tdata_run is too large to fit in SRAM memory segment)
 START GROUP
 LOAD ARM Flash Debug/another_main.o
-LOAD ARM Flash Debug/gpio.o
 LOAD ARM Flash Debug/HD44780U.o
 LOAD ARM Flash Debug/keypad.o
+LOAD ARM Flash Debug/gpio.o
 LOAD ARM Flash Debug/crt0.o
 LOAD ARM Flash Debug/Philips_LPC210X_Startup.o
 LOAD ARM Flash Debug/LPC210x.o
@@ -1542,9 +1542,9 @@ OUTPUT(ARM Flash Debug/Vorlesung2015.elf elf32-littlearm)
 
 .debug_frame    0x00000000     0x33a0
  .debug_frame   0x00000000       0x34 ARM Flash Debug/another_main.o
- .debug_frame   0x00000034       0xb0 ARM Flash Debug/gpio.o
- .debug_frame   0x000000e4      0x12c ARM Flash Debug/HD44780U.o
- .debug_frame   0x00000210       0x54 ARM Flash Debug/keypad.o
+ .debug_frame   0x00000034      0x12c ARM Flash Debug/HD44780U.o
+ .debug_frame   0x00000160       0x54 ARM Flash Debug/keypad.o
+ .debug_frame   0x000001b4       0xb0 ARM Flash Debug/gpio.o
  .debug_frame   0x00000264       0x40 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfprintf_double_long_long.o)
  .debug_frame   0x000002a4       0x8c C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfscanf_int.o)
  .debug_frame   0x00000330      0x260 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(libc_asm.o)
@@ -1559,9 +1559,9 @@ OUTPUT(ARM Flash Debug/Vorlesung2015.elf elf32-littlearm)
 
 .debug_info     0x00000000     0x2091
  .debug_info    0x00000000       0xb7 ARM Flash Debug/another_main.o
- .debug_info    0x000000b7      0x10c ARM Flash Debug/gpio.o
- .debug_info    0x000001c3      0x1db ARM Flash Debug/HD44780U.o
- .debug_info    0x0000039e       0x94 ARM Flash Debug/keypad.o
+ .debug_info    0x000000b7      0x1db ARM Flash Debug/HD44780U.o
+ .debug_info    0x00000292       0x94 ARM Flash Debug/keypad.o
+ .debug_info    0x00000326      0x10c ARM Flash Debug/gpio.o
  .debug_info    0x00000432       0xb9 ARM Flash Debug/crt0.o
  .debug_info    0x000004eb       0xe4 ARM Flash Debug/Philips_LPC210X_Startup.o
  .debug_info    0x000005cf       0xe0 ARM Flash Debug/VIC_irq_handler.o
@@ -1575,9 +1575,9 @@ OUTPUT(ARM Flash Debug/Vorlesung2015.elf elf32-littlearm)
 
 .debug_abbrev   0x00000000      0x525
  .debug_abbrev  0x00000000       0x89 ARM Flash Debug/another_main.o
- .debug_abbrev  0x00000089       0x8b ARM Flash Debug/gpio.o
- .debug_abbrev  0x00000114       0xf8 ARM Flash Debug/HD44780U.o
- .debug_abbrev  0x0000020c       0x63 ARM Flash Debug/keypad.o
+ .debug_abbrev  0x00000089       0xf8 ARM Flash Debug/HD44780U.o
+ .debug_abbrev  0x00000181       0x63 ARM Flash Debug/keypad.o
+ .debug_abbrev  0x000001e4       0x8b ARM Flash Debug/gpio.o
  .debug_abbrev  0x0000026f       0x14 ARM Flash Debug/crt0.o
  .debug_abbrev  0x00000283       0x12 ARM Flash Debug/Philips_LPC210X_Startup.o
  .debug_abbrev  0x00000295       0x14 ARM Flash Debug/VIC_irq_handler.o
@@ -1591,9 +1591,9 @@ OUTPUT(ARM Flash Debug/Vorlesung2015.elf elf32-littlearm)
 
 .debug_loc      0x00000000     0x2322
  .debug_loc     0x00000000       0x2c ARM Flash Debug/another_main.o
- .debug_loc     0x0000002c       0xdc ARM Flash Debug/gpio.o
- .debug_loc     0x00000108      0x160 ARM Flash Debug/HD44780U.o
- .debug_loc     0x00000268       0x58 ARM Flash Debug/keypad.o
+ .debug_loc     0x0000002c      0x160 ARM Flash Debug/HD44780U.o
+ .debug_loc     0x0000018c       0x58 ARM Flash Debug/keypad.o
+ .debug_loc     0x000001e4       0xdc ARM Flash Debug/gpio.o
  .debug_loc     0x000002c0       0x2d C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfprintf_double_long_long.o)
  .debug_loc     0x000002ed       0x79 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfscanf_int.o)
  .debug_loc     0x00000366      0xf12 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(libc2.o)
@@ -1605,11 +1605,11 @@ OUTPUT(ARM Flash Debug/Vorlesung2015.elf elf32-littlearm)
  .debug_aranges
                 0x00000000       0x20 ARM Flash Debug/another_main.o
  .debug_aranges
-                0x00000020       0x40 ARM Flash Debug/gpio.o
+                0x00000020       0x58 ARM Flash Debug/HD44780U.o
  .debug_aranges
-                0x00000060       0x58 ARM Flash Debug/HD44780U.o
+                0x00000078       0x28 ARM Flash Debug/keypad.o
  .debug_aranges
-                0x000000b8       0x28 ARM Flash Debug/keypad.o
+                0x000000a0       0x40 ARM Flash Debug/gpio.o
  .debug_aranges
                 0x000000e0       0x20 ARM Flash Debug/crt0.o
  .debug_aranges
@@ -1633,9 +1633,9 @@ OUTPUT(ARM Flash Debug/Vorlesung2015.elf elf32-littlearm)
 
 .debug_ranges   0x00000000      0xa70
  .debug_ranges  0x00000000       0x10 ARM Flash Debug/another_main.o
- .debug_ranges  0x00000010       0x30 ARM Flash Debug/gpio.o
- .debug_ranges  0x00000040       0x48 ARM Flash Debug/HD44780U.o
- .debug_ranges  0x00000088       0x18 ARM Flash Debug/keypad.o
+ .debug_ranges  0x00000010       0x48 ARM Flash Debug/HD44780U.o
+ .debug_ranges  0x00000058       0x18 ARM Flash Debug/keypad.o
+ .debug_ranges  0x00000070       0x30 ARM Flash Debug/gpio.o
  .debug_ranges  0x000000a0       0x20 ARM Flash Debug/Philips_LPC210X_Startup.o
  .debug_ranges  0x000000c0       0x10 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfprintf_double_long_long.o)
  .debug_ranges  0x000000d0       0x20 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfscanf_int.o)
@@ -1645,52 +1645,52 @@ OUTPUT(ARM Flash Debug/Vorlesung2015.elf elf32-littlearm)
  .debug_ranges  0x00000848       0x10 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libarm_v4t_a_le_eabi.a(libarm_run_dcc_port_server.o)
  .debug_ranges  0x00000858      0x218 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libm_v4t_a_le_eabi.a(libm2.o)
 
-.debug_line     0x00000000     0x170a
+.debug_line     0x00000000     0x171a
  .debug_line    0x00000000       0x8e ARM Flash Debug/another_main.o
- .debug_line    0x0000008e       0xd9 ARM Flash Debug/gpio.o
- .debug_line    0x00000167      0x152 ARM Flash Debug/HD44780U.o
- .debug_line    0x000002b9      0x150 ARM Flash Debug/keypad.o
- .debug_line    0x00000409      0x120 ARM Flash Debug/crt0.o
- .debug_line    0x00000529       0xf4 ARM Flash Debug/Philips_LPC210X_Startup.o
- .debug_line    0x0000061d       0xc0 ARM Flash Debug/VIC_irq_handler.o
- .debug_line    0x000006dd       0x75 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfprintf_double_long_long.o)
- .debug_line    0x00000752       0x74 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfscanf_int.o)
- .debug_line    0x000007c6      0x5b3 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(libc2.o)
- .debug_line    0x00000d79      0x56a C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libdebugio_v4t_a_le_eabi.a(libdebugio.o)
- .debug_line    0x000012e3       0x74 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_user_libc_v4t_a_le_eabi.a(user_libc.o)
- .debug_line    0x00001357       0x87 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libarm_v4t_a_le_eabi.a(libarm_run_dcc_port_server.o)
- .debug_line    0x000013de      0x32c C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libm_v4t_a_le_eabi.a(libm2.o)
+ .debug_line    0x0000008e      0x152 ARM Flash Debug/HD44780U.o
+ .debug_line    0x000001e0      0x150 ARM Flash Debug/keypad.o
+ .debug_line    0x00000330       0xe9 ARM Flash Debug/gpio.o
+ .debug_line    0x00000419      0x120 ARM Flash Debug/crt0.o
+ .debug_line    0x00000539       0xf4 ARM Flash Debug/Philips_LPC210X_Startup.o
+ .debug_line    0x0000062d       0xc0 ARM Flash Debug/VIC_irq_handler.o
+ .debug_line    0x000006ed       0x75 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfprintf_double_long_long.o)
+ .debug_line    0x00000762       0x74 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfscanf_int.o)
+ .debug_line    0x000007d6      0x5b3 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(libc2.o)
+ .debug_line    0x00000d89      0x56a C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libdebugio_v4t_a_le_eabi.a(libdebugio.o)
+ .debug_line    0x000012f3       0x74 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_user_libc_v4t_a_le_eabi.a(user_libc.o)
+ .debug_line    0x00001367       0x87 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libarm_v4t_a_le_eabi.a(libarm_run_dcc_port_server.o)
+ .debug_line    0x000013ee      0x32c C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libm_v4t_a_le_eabi.a(libm2.o)
 
-.debug_str      0x00000000     0x1015
+.debug_str      0x00000000     0x1025
  .debug_str     0x00000000      0x10f ARM Flash Debug/another_main.o
                                 0x11d (size before relaxing)
- .debug_str     0x0000010f       0x8d ARM Flash Debug/gpio.o
-                                 0xd6 (size before relaxing)
- .debug_str     0x0000019c       0xc3 ARM Flash Debug/HD44780U.o
+ .debug_str     0x0000010f       0xc3 ARM Flash Debug/HD44780U.o
                                 0x146 (size before relaxing)
- .debug_str     0x0000025f       0xa1 ARM Flash Debug/keypad.o
+ .debug_str     0x000001d2       0xa1 ARM Flash Debug/keypad.o
                                  0xef (size before relaxing)
- .debug_str     0x00000300       0x71 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfprintf_double_long_long.o)
+ .debug_str     0x00000273       0x9d ARM Flash Debug/gpio.o
+                                 0xe6 (size before relaxing)
+ .debug_str     0x00000310       0x71 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfprintf_double_long_long.o)
                                  0xba (size before relaxing)
- .debug_str     0x00000371       0x7c C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfscanf_int.o)
+ .debug_str     0x00000381       0x7c C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfscanf_int.o)
                                  0xc5 (size before relaxing)
- .debug_str     0x000003ed      0x57f C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(libc2.o)
+ .debug_str     0x000003fd      0x57f C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(libc2.o)
                                 0x655 (size before relaxing)
- .debug_str     0x0000096c      0x3cc C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libdebugio_v4t_a_le_eabi.a(libdebugio.o)
+ .debug_str     0x0000097c      0x3cc C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libdebugio_v4t_a_le_eabi.a(libdebugio.o)
                                 0x415 (size before relaxing)
- .debug_str     0x00000d38       0xd2 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_user_libc_v4t_a_le_eabi.a(user_libc.o)
+ .debug_str     0x00000d48       0xd2 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_user_libc_v4t_a_le_eabi.a(user_libc.o)
                                 0x11b (size before relaxing)
- .debug_str     0x00000e0a       0x82 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libarm_v4t_a_le_eabi.a(libarm_run_dcc_port_server.o)
+ .debug_str     0x00000e1a       0x82 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libarm_v4t_a_le_eabi.a(libarm_run_dcc_port_server.o)
                                  0xcb (size before relaxing)
- .debug_str     0x00000e8c      0x189 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libm_v4t_a_le_eabi.a(libm2.o)
+ .debug_str     0x00000e9c      0x189 C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libm_v4t_a_le_eabi.a(libm2.o)
                                 0x212 (size before relaxing)
 
 .comment        0x00000000       0x4e
  .comment       0x00000000       0x4e ARM Flash Debug/another_main.o
                                  0x4f (size before relaxing)
- .comment       0x00000000       0x4f ARM Flash Debug/gpio.o
  .comment       0x00000000       0x4f ARM Flash Debug/HD44780U.o
  .comment       0x00000000       0x4f ARM Flash Debug/keypad.o
+ .comment       0x00000000       0x4f ARM Flash Debug/gpio.o
  .comment       0x00000000       0x4f C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfprintf_double_long_long.o)
  .comment       0x00000000       0x4f C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(__vfscanf_int.o)
  .comment       0x00000000       0x4f C:/Program Files (x86)/Rowley Associates Limited/CrossWorks for ARM 2.3/lib/libc_v4t_a_le_eabi.a(libc2.o)
@@ -1704,11 +1704,11 @@ OUTPUT(ARM Flash Debug/Vorlesung2015.elf elf32-littlearm)
  .ARM.attributes
                 0x00000000       0x32 ARM Flash Debug/another_main.o
  .ARM.attributes
-                0x00000032       0x32 ARM Flash Debug/gpio.o
+                0x00000032       0x32 ARM Flash Debug/HD44780U.o
  .ARM.attributes
-                0x00000064       0x32 ARM Flash Debug/HD44780U.o
+                0x00000064       0x32 ARM Flash Debug/keypad.o
  .ARM.attributes
-                0x00000096       0x32 ARM Flash Debug/keypad.o
+                0x00000096       0x32 ARM Flash Debug/gpio.o
  .ARM.attributes
                 0x000000c8       0x24 ARM Flash Debug/crt0.o
  .ARM.attributes

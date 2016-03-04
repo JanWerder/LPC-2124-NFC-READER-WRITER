@@ -7,12 +7,12 @@
     <folder Name="Source Files" file_name="">
       <configuration Name="Common" filter="c;cpp;cxx;cc;h;s;asm;inc"/>
       <file file_name="another_main.c"/>
-      <file file_name="gpio.c"/>
-      <file file_name="gpio.h"/>
       <file file_name="LPC-2124-HD44780U-Display-Driver/HD44780U.c"/>
       <file file_name="LPC-2124-HD44780U-Display-Driver/HD44780U.h"/>
       <file file_name="Membrane_Switch/keypad.c"/>
       <file file_name="Membrane_Switch/keypad.h"/>
+      <file file_name="Membrane_Switch/gpio.c"/>
+      <file file_name="Membrane_Switch/gpio.h"/>
     </folder>
     <folder Name="System Files">
       <file file_name="$(StudioDir)/source/crt0.s"/>

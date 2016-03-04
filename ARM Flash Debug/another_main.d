@@ -7,4 +7,4 @@ ARM\ Flash\ Debug/another_main.o: \
  C:/Program\ Files\ (x86)/Rowley\ Associates\ Limited/CrossWorks\ for\ ARM\ 2.3/include/stdbool.h \
  C:/Users/janwe/AppData/Local/Rowley\ Associates\ Limited/CrossWorks\ for\ ARM/packages/include/targets/LPC2000.h \
  C:/Users/janwe/AppData/Local/Rowley\ Associates\ Limited/CrossWorks\ for\ ARM/packages/include/targets/LPC2124.h \
- keypad.h gpio.h
+ Membrane_Switch/keypad.h Membrane_Switch/gpio.h
