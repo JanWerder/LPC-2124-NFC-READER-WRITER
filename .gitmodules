@@ -1,3 +1,6 @@
 [submodule "LPC-2124-HD44780U-Display-Driver"]
 	path = LPC-2124-HD44780U-Display-Driver
 	url = https://github.com/JanWerder/LPC-2124-HD44780U-Display-Driver.git
+[submodule "Membrane_Switch"]
+	path = Membrane_Switch
+	url = https://github.com/vvye/Membrane_Switch.git
