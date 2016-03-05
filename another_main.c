@@ -1,22 +1,22 @@
 #include "stdio.h"
 #include <libarm.h>
-#include <stdbool.h>
 #include <targets/LPC2000.h>
+
 #include <Membrane_Switch/keypad.h>
+#include <LPC-2124-HD44780U-Display-Driver/HD44780U.h>
 
 
 int main(void) {
         
         LCD_Init();
         LCD_Clear();
+        Keypad_Init();
 
         char c;
 
-        init_keypad();
         while (true)
         {
-            LCD_Init();
-            c = wait_and_get_key();
-            LCD_WriteChar(c);
+            c = Keypad_WaitAndGetKey();
+            LCD_AppendCharToScreen(c);
         }
 }
