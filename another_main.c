@@ -1,29 +1,22 @@
-/**
-    NFC Reader/Writer
-    J./E./J., 2016
-
-    This does stuff.
-*/
-
-
-#include "gpio/gpio.h"
-#include "keypad/keypad.h"
-#include "lcd/lcd.h"
-
-#include <stdio.h>
+#include "stdio.h"
 #include <libarm.h>
+#include <targets/LPC2000.h>
+
+#include <Membrane_Switch/keypad.h>
+#include <LPC-2124-HD44780U-Display-Driver/HD44780U.h>
 
 
-int main(void)
-{
-    LCD_Init();
-    LCD_Clear();
-    Keypad_Init();
+int main(void) {
+        
+        LCD_Init();
+        LCD_Clear();
+        Keypad_Init();
 
-    char c;
+        char c;
 
-    while (true) {
-        c = Keypad_WaitAndGetKey();
-        LCD_AppendCharToScreen(c);
-    }
+        while (true)
+        {
+            c = Keypad_WaitAndGetKey();
+            LCD_AppendCharToScreen(c);
+        }
 }
