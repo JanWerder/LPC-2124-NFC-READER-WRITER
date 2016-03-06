@@ -46,18 +46,18 @@
  </TraceWindow>
  <Watch1>
   <Watches active="1" update="Never" >
-   <Watchpoint linenumber="152" radix="16" name="btn_down" expression="btn_down" filename="c:/users/eric/documents/crossworks projects/buschprojekt/main.c" />
-   <Watchpoint linenumber="147" radix="16" name="T0CR2" expression="T0CR2" filename="c:/users/eric/documents/crossworks projects/buschprojekt/main.c" />
-   <Watchpoint evalMode="1" linenumber="0" evalType="1" radix="16" name="list" expression="list" filename="" />
-   <Watchpoint linenumber="0" radix="16" name="COL_4" expression="COL_4" filename="" />
-   <Watchpoint linenumber="0" radix="2" name="((int) c % 10000) &lt;&lt;25" expression="((int) c % 10000) &lt;&lt;25" filename="" />
-   <Watchpoint linenumber="0" radix="2" name="((int) c % 10000) + (((int) c % 10000) *1000000000000000000000000)" expression="((int) c % 10000) + (((int) c % 10000) *1000000000000000000000000)" filename="" />
-   <Watchpoint linenumber="0" radix="2" name="((int) c % 100000000) &lt;&lt;17" expression="((int) c % 100000000) &lt;&lt;17" filename="" />
-   <Watchpoint linenumber="0" radix="11" name="characterCount" expression="characterCount" filename="" />
-   <Watchpoint evalMode="0" linenumber="0" evalType="0" radix="1" name="s" expression="s" filename="" />
-   <Watchpoint linenumber="0" radix="2" name="(int) c" expression="(int) c" filename="" />
-   <Watchpoint linenumber="0" radix="1" name="c" expression="c" filename="" />
    <Watchpoint linenumber="0" radix="2" name="((int) c % 10000)" expression="((int) c % 10000)" filename="" />
+   <Watchpoint linenumber="0" radix="1" name="c" expression="c" filename="" />
+   <Watchpoint linenumber="0" radix="2" name="(int) c" expression="(int) c" filename="" />
+   <Watchpoint evalMode="0" linenumber="0" evalType="0" radix="1" name="s" expression="s" filename="" />
+   <Watchpoint linenumber="0" radix="11" name="characterCount" expression="characterCount" filename="" />
+   <Watchpoint linenumber="0" radix="2" name="((int) c % 100000000) &lt;&lt;17" expression="((int) c % 100000000) &lt;&lt;17" filename="" />
+   <Watchpoint linenumber="147" radix="16" name="T0CR2" expression="T0CR2" filename="c:/users/eric/documents/crossworks projects/buschprojekt/main.c" />
+   <Watchpoint linenumber="0" radix="2" name="((int) c % 10000) &lt;&lt;25" expression="((int) c % 10000) &lt;&lt;25" filename="" />
+   <Watchpoint linenumber="0" radix="16" name="COL_4" expression="COL_4" filename="" />
+   <Watchpoint evalMode="1" linenumber="0" evalType="1" radix="16" name="list" expression="list" filename="" />
+   <Watchpoint linenumber="0" radix="2" name="((int) c % 10000) + (((int) c % 10000) *1000000000000000000000000)" expression="((int) c % 10000) + (((int) c % 10000) *1000000000000000000000000)" filename="" />
+   <Watchpoint linenumber="152" radix="16" name="btn_down" expression="btn_down" filename="c:/users/eric/documents/crossworks projects/buschprojekt/main.c" />
   </Watches>
  </Watch1>
  <Watch2>
@@ -75,20 +75,23 @@
   <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\Typedefs.h" y="0" path="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\Typedefs.h" left="0" selected="0" name="unnamed" top="0" />
   <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\keypad.h" y="12" path="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\keypad.h" left="0" selected="0" name="unnamed" top="0" />
   <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\gpio.c" y="22" path="C:\Users\janwe\Documents\CrossWorks Projects\BuschProjekt\gpio.c" left="0" selected="0" name="unnamed" top="0" />
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="39" debugPath="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\another_main.c" y="18" path="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\another_main.c" left="0" selected="1" name="unnamed" top="0" />
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\LPC-2124-HD44780U-Display-Driver\HD44780U.c" y="88" path="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\LPC-2124-HD44780U-Display-Driver\HD44780U.c" left="0" selected="0" name="unnamed" top="63" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="38" debugPath="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\another_main.c" y="19" path="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\another_main.c" left="0" selected="1" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="28" debugPath="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\LPC-2124-HD44780U-Display-Driver\HD44780U.c" y="98" path="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\LPC-2124-HD44780U-Display-Driver\HD44780U.c" left="0" selected="0" name="unnamed" top="73" />
   <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\LPC-2124-HD44780U-Display-Driver\HD44780U.h" y="0" path="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\LPC-2124-HD44780U-Display-Driver\HD44780U.h" left="0" selected="0" name="unnamed" top="0" />
   <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Typedefs.h" y="0" path="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Typedefs.h" left="0" selected="0" name="unnamed" top="0" />
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="16" debugPath="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Membrane_Switch\keypad.h" y="23" path="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Membrane_Switch\keypad.h" left="0" selected="0" name="unnamed" top="0" />
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Membrane_Switch\keypad.c" y="11" path="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Membrane_Switch\keypad.c" left="0" selected="0" name="unnamed" top="0" />
-  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Membrane_Switch\gpio.c" y="23" path="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Membrane_Switch\gpio.c" left="0" selected="0" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="25" debugPath="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Membrane_Switch\keypad.h" y="5" path="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Membrane_Switch\keypad.h" left="0" selected="0" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="9" debugPath="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Membrane_Switch\keypad.c" y="77" path="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Membrane_Switch\keypad.c" left="0" selected="0" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="1" debugPath="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Membrane_Switch\gpio.c" y="40" path="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Membrane_Switch\gpio.c" left="0" selected="0" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Membrane_Switch\gpio.h" y="13" path="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Membrane_Switch\gpio.h" left="0" selected="0" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="C:\users\janwe\documents\github\lpc-2124-nfc-reader-writer\lpc-2124-nfc-pn532\PN532.c" y="108" path="C:\users\janwe\documents\github\lpc-2124-nfc-reader-writer\lpc-2124-nfc-pn532\PN532.c" left="0" selected="0" name="unnamed" top="88" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\LPC-2124-NFC-PN532\PN532.h" y="19" path="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\LPC-2124-NFC-PN532\PN532.h" left="0" selected="0" name="unnamed" top="0" />
  </Files>
- <ARMCrossStudioWindow activeProject="Vorlesung2015" autoConnectTarget="Olimex ARM-USB-OCD" debugSearchFileMap="C:\Users\products\build\crossworks\arm\crossworks_v2\shared\target\libarm\libarm_dcc_read.s
+ <ARMCrossStudioWindow activeProject="Projektarbeit2016" autoConnectTarget="Olimex ARM-USB-OCD" debugSearchFileMap="C:\Users\products\build\crossworks\arm\crossworks_v2\shared\target\libarm\libarm_dcc_read.s
 
 C:\Users\products\build\crossworks\arm\crossworks_v2\shared\target\libarm\libarm_dcc_write.s
 
 C:\Users\products\build\crossworks\arm\crossworks_v2\shared\target\libc\arm\strlen.asm
 
 C:\Users\products\build\crossworks\arm\crossworks_v2\shared\target\libdebugio\arm\debug_printf.s
-" fileDialogInitialDirectory="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\Membrane_Switch" fileDialogDefaultFilter="*.c" autoConnectCapabilities="388479" debugSearchPath="" buildConfiguration="ARM Flash Debug" />
+" fileDialogInitialDirectory="C:\Users\janwe\Documents\GitHub\LPC-2124-NFC-READER-WRITER\LPC-2124-NFC-PN532" fileDialogDefaultFilter="" autoConnectCapabilities="388479" debugSearchPath="" buildConfiguration="ARM Flash Debug" />
 </session>
