@@ -4,3 +4,6 @@
 [submodule "Membrane_Switch"]
 	path = Membrane_Switch
 	url = https://github.com/vvye/Membrane_Switch.git
+[submodule "LPC-2124-NFC-PN532"]
+	path = LPC-2124-NFC-PN532
+	url = https://github.com/rankec/LPC-2124-NFC-PN532

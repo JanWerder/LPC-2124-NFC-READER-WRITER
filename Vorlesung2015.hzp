@@ -13,6 +13,10 @@
       <file file_name="Membrane_Switch/keypad.h"/>
       <file file_name="Membrane_Switch/gpio.c"/>
       <file file_name="Membrane_Switch/gpio.h"/>
+      <file file_name="LPC-2124-NFC-PN532/i2c.c"/>
+      <file file_name="LPC-2124-NFC-PN532/PN532.c"/>
+      <file file_name="LPC-2124-NFC-PN532/i2c.h"/>
+      <file file_name="LPC-2124-NFC-PN532/PN532.h"/>
     </folder>
     <folder Name="System Files">
       <file file_name="$(StudioDir)/source/crt0.s"/>
