@@ -1,5 +1,5 @@
 # LPC-2124-NFC-READER-WRITER
-A NFC Reader and Writer Implementation fpr the NXP LPC 2124
+A NFC Reader and Writer Implementation for the NXP LPC 2124
 
 ###Configuration###
 - Pins 0.08 - 0.15 for the HD44780U display data pins
